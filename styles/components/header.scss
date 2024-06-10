@@ -1,0 +1,142 @@
+@import './../constants.scss';
+
+@mixin d-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header {
+    padding: 40px 110px;
+
+    @media (max-width:1350px) {
+        padding: 20px 25px;
+    }
+
+    &__container {
+        @include d-center;
+        height: 100%;
+        align-items: flex-end;
+
+    }
+
+    &__logo {
+        width: 107px;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+
+        p {
+            font-family: "Playfair Display";
+            font-size: 1.5rem;
+            line-height: 2rem;
+            color: $--ui-dark-red;
+        }
+
+        img {
+            position: absolute;
+            top: -65px;
+            left: -35px;
+            z-index: 9;
+        }
+    }
+
+    &__nav-contact {
+        @include d-center;
+        gap: 1.875rem;
+
+        @media (max-width:1350px) {
+            align-items: flex-end;
+        }
+    }
+
+    &__navigation {
+        .navigation__item {
+            a {
+                display: flex;
+                width: 100px;
+                height: 90px;
+                font-family: "Playfair Display";
+                font-size: 1rem;
+                line-height: 1.33rem;
+                color: $--ui-gray;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+
+                svg {
+                    transition: fill 200ms ease;
+                    fill: $--ui-gray;
+                }
+
+                &:hover {
+                    svg {
+                        transition: fill 200ms ease;
+                        fill: $--ui-main;
+                    }
+                }
+            }
+        }
+
+        .navigation__list {
+            @include d-center;
+            gap: 1.875rem;
+
+            @media (max-width:1350px) {
+                gap: 0;
+            }
+
+        }
+
+
+    }
+
+    &__contact {
+        @include d-center;
+        gap: 1.875rem;
+
+        .contact__phone {
+            background: $--ui-tel;
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 1.3rem;
+            text-align: left;
+            color: $--ui-white;
+            display: flex;
+            border-radius: 20px;
+            align-items: center;
+            padding: 22px 40px 22px 20px;
+            text-wrap: nowrap;
+            opacity: 1;
+            transition: opacity 200ms ease;
+
+            @media (max-width:1350px) {
+                padding: 10px 30px 10px 20px;
+            }
+
+            &:hover {
+                transition: opacity 200ms ease;
+                opacity: .8;
+            }
+        }
+
+        .network {
+            @include d-center;
+            gap: 0.9375rem;
+
+            a {
+                svg {
+                    transition: fill 200ms ease;
+                    fill: $--ui-gray;
+                }
+
+                &:hover {
+                    svg {
+                        transition: fill 200ms ease;
+                        fill: $--ui-main;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+@import './../constants.scss';
+
+
+.food-section {
+
+    &__items {
+        margin: 76px 0 108px 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+
+        @media (max-width:1350px) {
+            grid-template-columns: repeat(2, 1fr);
+
+        }
+    }
+
+    &__item {
+        display: flex;
+        padding: 15px;
+        gap: 15px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: all 200ms ease;
+
+        &:hover {
+            transition: all 200ms ease;
+            background-color: $--ui-main;
+
+            p,
+            h3 {
+                color: $--ui-white;
+            }
+        }
+
+    }
+}
+
+.food-item {
+    &__image {
+        object-fit: none;
+        max-width: 140px;
+        max-height: 120px;
+    }
+}

@@ -1,0 +1,116 @@
+@import './../constants.scss';
+
+.blog {
+    margin-bottom: 190px;
+
+    &__slider {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.slider {
+    &__controls {
+        display: flex;
+
+        button {
+            border: 0;
+            background: none;
+            position: absolute;
+            top: 50%;
+            cursor: pointer;
+            width: 66px;
+            height: 66px;
+
+            &:first-child {
+                left: 0;
+            }
+
+            &:last-child {
+                right: 0;
+                transform: rotate(180deg);
+            }
+
+            svg {
+                transition: fill 200ms ease;
+                fill: $--ui-gray-2;
+            }
+
+            &:hover {
+                svg {
+                    transition: fill 200ms ease;
+                    fill: $--ui-main;
+                }
+            }
+        }
+    }
+
+    &__dots {
+        display: flex;
+        gap: 15px;
+    }
+
+    &__dot {
+        cursor: pointer;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: $--ui-gray-2;
+        transition: opacity 200ms ease;
+        opacity: 1;
+
+        &:hover {
+            transition: opacity 200ms ease;
+            opacity: .8;
+        }
+    }
+
+    &__dot--active {
+        background-color: $--ui-main;
+    }
+}
+
+.slides {
+    position: relative;
+    margin: 0px 140px;
+    padding: 60px;
+
+    &__icon {
+        position: absolute;
+
+        &:first-child {
+            left: 0;
+            top: 0;
+        }
+
+        &:last-child {
+            position: absolute;
+            transform: rotate(180deg);
+            right: 0;
+            bottom: 0;
+        }
+    }
+}
+
+.slide {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    &__content {
+        max-width: 1060px;
+
+        .blog-content {
+            &__title {
+                font-weight: 500;
+            }
+
+            &__text {
+                font-size: 1.125rem;
+            }
+        }
+    }
+}

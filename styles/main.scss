@@ -1,0 +1,122 @@
+@import 'reset.scss';
+@import 'constants.scss';
+@import 'components/header';
+@import 'components/header';
+@import 'components/banner';
+@import 'components/food-section';
+@import 'components/recipes';
+@import 'components/blog';
+@import 'components/footer';
+
+body {
+    max-width: 1990px;
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'DM Sans', sans-serif;
+}
+
+html {
+    font-size: 32px;
+    font-weight: 400;
+
+    @media (max-width:1550px) {
+        font-size: 23px;
+    }
+
+    @media (max-width:1350px) {
+        font-size: 18px;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 110px;
+
+    @media (max-width:1350px) {
+        padding: 0 40px;
+
+    }
+}
+
+.custom-button {
+    cursor: pointer;
+    background-color: $--ui-main;
+    color: $--ui-white;
+    border: 0;
+    width: 100%;
+    border-radius: 30px;
+    outline: 0 !important;
+    padding: 20px 0px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.3rem;
+    max-width: 289px;
+    opacity: 1;
+    transition: opacity 100ms ease;
+
+    @media (max-width:1350px) {
+        max-width: 250px;
+        padding: 10px 0px;
+    }
+
+    &:hover {
+        opacity: .8;
+        transition: all 100ms ease;
+    }
+}
+
+a {
+    text-decoration: none;
+
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2.6rem;
+    color: $--ui-dark-red;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 2.6rem;
+    text-align: center;
+    color: $--ui-black;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.95rem;
+    color: $--ui-black;
+}
+
+h4 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.3rem;
+    color: $--ui-black;
+}
+
+hr {
+    border-radius: 10px;
+    margin: 35px auto;
+    border: none;
+    max-width: 50%;
+    height: 4px;
+    background: $--ui-gray-2;
+
+    @media (max-width:1350px) {
+        margin: 15px auto;
+    }
+}
